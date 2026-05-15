@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>地雷競技場 - 創房與對戰系統</title>
+    <title>地雷競技場 - 創房與對戰系統</title>                                          
     <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
     <style>
         body { font-family: 'Segoe UI', sans-serif; background: #1a1a1a; color: #eee; display: flex; flex-direction: column; align-items: center; margin: 0; padding: 20px; }
@@ -82,7 +82,7 @@
 
     <script>
         // 連線設定 (請確保 server.js 已啟動)
-        const socket = io('http://localhost:3000', { reconnection: false });
+        const socket = io('https://wanyes-minesweeper-online.onrender.com', { reconnection: false });
         
         const size = 10, mineCount = 15;
         let cells = [], gameActive = false, isFirstClick = true;
