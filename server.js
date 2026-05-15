@@ -1,10 +1,14 @@
 const express = require('express');
 const app = express();
 const http = require('http').createServer(app);
+const path = require('path'); // 引入路徑套件
 const io = require('socket.io')(http, {
     cors: { origin: "*" } // 允許所有來源連線
 });
-
+// 新增這段：處理網頁顯示
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 // 記錄房間資訊 (可選，用於後續擴充)
 const rooms = {};
 
